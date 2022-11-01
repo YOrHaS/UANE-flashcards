@@ -36,7 +36,7 @@ body{
   max-width: 250px;
   min-height: 350px;
   margin: auto;
-  background: cadetblue; /* color superioir */
+  background: #007bff; /* color superioir */
   color: white; /* letra superior */
   margin-top: -350px;
 }
