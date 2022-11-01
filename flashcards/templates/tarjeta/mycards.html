@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h2>{%block title %}Mis Tarjetas{% endblock %}</h2>   
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid ">
+
+
+  <div class="row justify-content-center">
+
+
+
+    <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Adelante</th>
+            <th scope="col">Atras</th>
+            <th scope="col">Mazo</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for tarjeta in  tarjetas %}
+
+          <tr>
+            <th scope="row"> {{ tarjeta.adelante }}</th>
+            <td> {{ tarjeta.atras }}</td>
+            <td>  
+
+              {% for mazo in mazos %}
+              {% if tarjeta.idMazo == mazo.id %}
+              {{ mazo.nombre }}
+              {% endif %}
+              {% endfor %}
+
+            
+            </td>
+            <td> 
+                <a class="btn btn-info" href="{{ url_for('tarjeta.update_card', id=tarjeta.id) }}">Editar</a>
+                <a class="btn btn-danger" href="{{ url_for('tarjeta.card_delete', id=tarjeta.id) }}">Eliminar</a> {# Nombre de funion #}
+            </td>
+          </tr>
+          
+          {% endfor %}
+
+          
+
+        </tbody>
+      </table>
+
+      </div>
+      </div>
+
+{% endblock %}

@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    {% if g.user.id == mazo.idUsuario %}
+    
+    
+    <form method="post" style="margin: 0;">   
+              
+
+    {% for tarjeta in  tarjetas %}
+    <div class="container " style="margin-bottom: 10px;">
+        <div class="row justify-content-center">
+        <div class="col-lg-5">
+        <div class="card shadow-lg border-0 rounded-lg mt-5">
+         
+        <div   class="card-body">
+   
+
+    <div >
+    
+        <div class="adelante"  >
+            <p class="texto-int" > {{ tarjeta.atras }}  </p>
+    
+            
+    
+            <div class="atras"  >
+    
+                
+                <h2  class="h-int">  {{ tarjeta.adelante }} </h2>
+    
+              
+    
+                </div>
+        </div>
+           
+        
+        <div class="pregunta"  >
+        <p>Que tan dificil es:</p>
+    
+        
+        <input type="radio" id="facil" name="{{ tarjeta.id }}" value="facil">
+        <label class="form-label" for="facil">Fácil</label>
+    
+        <input type="radio" id="normal" name="{{ tarjeta.id }}" value="normal" checked>
+        <label class="form-label" for="normal">Normal</label>
+    
+        <input type="radio" id="dificil" name="{{ tarjeta.id }}" value="dificil">
+        <label class="form-label" for="dificil">Dificil</label>
+        </div>
+        
+    </div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+{% endfor %}
+
+
+{% if tarjetas|length > 0 %}
+
+<div>
+    <input class="btn btn-primary"  style=" width: 33%; margin-top: 20px; margin-left:33%; margin-bottom: 20px;" type="submit", value="Guardar">
+</div>
+
+</form>
+
+
+
+
+{% else %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+
+            <h1>Mazo vacio</h1>
+        </div>
+    </div>
+</div>
+
+{% endif %}
+
+{% else %}
+
+
+
+{% for tarjeta in  tarjetas %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+             <div class="card shadow-lg border-0 rounded-lg mt-5">
+     
+                <div   class="card-body">
+
+
+                    <div  style="margin-bottom: 10px; ">
+                        
+                        <div class="adelante"  >
+                            <p class="texto-int" > {{ tarjeta.atras }}  </p>
+
+                            
+
+                            <div class="atras"  >
+
+                                
+                                <h3  class="h-int">  {{ tarjeta.adelante }} </h3>
+
+                            
+
+                            </div>
+                        </div>   
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+
+
+
+{% endif %}
+
+
+{% endblock %}
+    
+
+   

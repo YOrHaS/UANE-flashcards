@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+<h2>{%block title %}Mis Mazos{% endblock %}</h2>   
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+
+<div class="container-fluid">
+
+
+  <div class="row justify-content-center">
+
+    {% if g.user %}
+    <a class="btn btn-secondary btn-icon-split"  style="margin-bottom: 20px;" href="{{ url_for('mazo.create') }}">Nuevo mazo</a>
+    {% endif%}
+
+
+
+
+    
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Nombre</th>
+      
+        
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for mazo in  mazos %}
+
+      <tr>
+        <th scope="row"> {{ mazo.nombre }} </th>
+      
+        <td> 
+                {% if g.user.id != mazo.idUsuario %}
+                <a class="btn btn-primary" href="{{ url_for('mazo.study', id=mazo.id) }}">Ver</a>
+                <a class="btn btn-info" href="{{ url_for('mazo.acquire', id=mazo.id) }}">Adquirir</a>
+                {% endif %}
+
+              {% if g.user.id == mazo.idUsuario %}
+ {# ------------------ en url_for() va nombre de función segun blueprint. En este caso Blueprint mazo y las funciones study, update, delete----------- #}
+            <a class="btn btn-primary" href="{{ url_for('mazo.study', id=mazo.id) }}">Practicar</a>
+            <a class="btn btn-info" href="{{ url_for('mazo.update', id=mazo.id) }}">Editar</a>
+            <a class="btn btn-danger" href="{{ url_for('mazo.delete', id=mazo.id) }}">Eliminar</a>
+{# ------------------ en url_for() va nombre de función segun blueprint. En este caso tarjeta y la funcion create_card ----------- #}
+       
+            <a  href="{{ url_for('tarjeta.create_card', id=mazo.id) }}">
+                <img src="{{ url_for('static', filename='img/icono_add.png') }}" width="32" height="32" >
+            </a> 
+            {% endif %}
+        </td>
+      </tr>
+      
+       
+
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+  </div>
+  </div>
+    
+    {% endblock %}
