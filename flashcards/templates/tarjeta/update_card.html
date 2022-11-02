@@ -21,9 +21,11 @@
                         
                         </div>
                     
-                        <div class="mb-3">
+                      <div class="mb-3">
                             <label class="form-label"  for="atras">Atras</label>
-                            <input class="form-control" type="text" name="atras" id="atras" value="{{ tarjeta.atras }}" required>
+                            <textarea  class="form-control"  type="text" name="atras" id="atras"  rows="5" cols="33" required>
+                                {{ tarjeta.atras }}
+                            </textarea>
                         </div>
                         
                         <input class="btn btn-primary" type="submit", value="Guardar">
