@@ -76,7 +76,8 @@
         
         {% for message in get_flashed_messages() %}
         {#jinga comentario  se tiene que escribir exactamente asi {{ }}, los corchetes juntos,  o da error#}
-        <div> {{    message     }} </div>
+        <div class="alert alert-danger" role="alert"> {{    message     }} </div>
+        
 
         {% endfor %}               
     </section>
