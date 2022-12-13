@@ -5,7 +5,9 @@
 En la consola escribir dentro de un espacio virtual de preferencia
 
 pip install -r requirements.txt
+
 set FLASK_APP=app.py
+
 flask run
 
 
