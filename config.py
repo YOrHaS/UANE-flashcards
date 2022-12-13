@@ -4,6 +4,7 @@ class Config:
 
     #configuracion de base de datos
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    
     SQLALCHEMY_DATABASE_URI = "postgresql://postgres:71W8BisG3nqdufsIBj06@containers-us-west-153.railway.app:6899/railway"
     #SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:root@localhost:3306/api_flashcards"
     #caa269e6-544a-41d8-8b27-ba3d95a638c1
