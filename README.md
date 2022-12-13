@@ -8,11 +8,6 @@ pip install -r requirements.txt
 set FLASK_APP=app.py
 flask run
 
-Si se corre con una base de datos en locla, la base debe ser MySQL con nobre api_flashcards
-
-Se adjunta los datos y esquemas de las tres tablas mazos, usuarios, y tarjetas
-
-
 
 2. Proyecto desplegado en Railway https://railway.app
 
