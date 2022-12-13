@@ -8,7 +8,7 @@ class Config:
     #caa269e6-544a-41d8-8b27-ba3d95a638c1
     #SQLALCHEMY_DATABASE_URI = "postgresql://lffvohgbhqtidc:ba6ffb9ff8c954004cf21fbe0faa1ac1f27832206b5f015e8b8f1a1795c9e448@ec2-54-160-200-167.compute-1.amazonaws.com:5432/d1n7s1vclebbbt"
 
-    SQLALCHEMY_DATABASE_URI = "postgresql://postgres:7c4fmPVazkag1o5JbXjX@containers-us-west-169.railway.app:6822/railway"
+    SQLALCHEMY_DATABASE_URI = "postgresql://postgres:71W8BisG3nqdufsIBj06@containers-us-west-153.railway.app:6899/railway"
     
 #clases que herada de Config
 class ProductionConfig(Config):
