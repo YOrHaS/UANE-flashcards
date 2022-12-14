@@ -64,7 +64,7 @@ Para funcionar la aplicación requiere estar conectada a una base de datos SQL p
    ```sh
    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:root@localhost:3306/flashcards"
    ```
-Que corresponde a una base de datos MySQL local de nombre flashcards con nombre de usuario root y contraseña root en el puerto 3306. Una vez conectada ala base de datos la aplicación creara la tablas necesarias usando SQLAlchemy.
+Que corresponde a una base de datos MySQL local de nombre flashcards con nombre de usuario root y contraseña root en el puerto 3306. Una vez conectada ala base de datos la aplicación creara las tablas necesarias usando SQLAlchemy.
 
 Con la base de datos conectada escribir en consola dentro de un espacio virtual de preferencia
 
@@ -76,7 +76,7 @@ Con la base de datos conectada escribir en consola dentro de un espacio virtual 
    
 ### Aplicación desplegada
 
-LA aplicación está disponible en  [https://uane-flashcards-production.up.railway.app/](https://uane-flashcards-production.up.railway.app/). Tiene tres usuarios Osmar, Maria y Miguelm todos con contrasela 123 con sus respectivos mazos publicos y privados.
+La aplicación está disponible en  [https://uane-flashcards-production.up.railway.app/](https://uane-flashcards-production.up.railway.app/). Tiene tres usuarios Osmar, Maria y Miguel todos con contraseña 123 con sus respectivos mazos públicos y privados.
 
 <p align="right">(<a href="#readme">back to top</a>)</p>
 
