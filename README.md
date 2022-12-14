@@ -21,6 +21,7 @@
       <a href="#instrucciones">Instrucciones</a>
       <ul>
         <li><a href="#instalación">Instalación</a></li>
+       <li><a href="#aplicación-desplegada">Aplicación desplegada</a></li>
       </ul>
     </li>
     
@@ -34,6 +35,10 @@
 
 ## Sobre el proyecto
 
+Aplicación web de flashcards construida con el Framework Flask y  SQLAlchemy para el backend y Bootstrap para el frontend. La aplicación permite el registro y login de usuarios los cuales pueden crear, editar y eliminar tanto tarjetas como mazos los cuales pueden decidir si hacerlos públicos para que otros usuarios puedan verlos y adquirirlos o mantenerlos en privado. La aplicación también permite crear tarjetas buscando palabras en https://dictionary.cambridge.org mediante web scraping tanto de inglés a español como de español a inglés. 
+Para facilitar el proceso de memorización la aplicación se basa en técnicas de repaso espaciado que tienen en cuenta el funcionamiento de la memoria, en concreto el sistema Leitner. Cada tarjeta tiene asignado un grado de dificultad que va del 1 al 5 según la facilidad con la que el usuario recuerda la respuesta. Al momento de estudiar un mazo la aplicación muestra en orden las tarjetas en base a su grado de dificultad lo que permite repasar primero las más difíciles.
+
+
 
 
 ### Herramientas
@@ -41,7 +46,6 @@
 
 * ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 * ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
 
@@ -54,23 +58,25 @@
 
 
 ### Instalación
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+Para funcionar la aplicación requiere estar conectada a una base de datos SQL por ejemplo MySQL o PostgreSQL. Para conectar a la base de datos se debe establecer el url de la base de datos en el archivo config.py. Por ejemplo
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+
+   ```sh
+   SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:root@localhost:3306/flashcards"
+   ```
+Que corresponde a una base de datos MySQL local de nombre flashcards con nombre de usuario root y contraseña root en el puerto 3306. Una vez conectada ala base de datos la aplicación creara la tablas necesarias usando SQLAlchemy.
+
+Con la base de datos conectada escribir en consola dentro de un espacio virtual de preferencia
+
    ```sh
    pip install -r requirements.txt
    set FLASK_APP=app.py
    flask run
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+   
+### Aplicación desplegada
+
+LA aplicación está disponible en  [https://uane-flashcards-production.up.railway.app/](https://uane-flashcards-production.up.railway.app/). Tiene tres usuarios Osmar, Maria y Miguelm todos con contrasela 123 con sus respectivos mazos publicos y privados.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,35 +91,6 @@ Link del proyecto : [https://uane-flashcards-production.up.railway.app/](https:/
 Link del código del proyecto : [https://github.com/YOrHaS/UANE-flashcards](https://github.com/YOrHaS/UANE-flashcards)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-1. Para desplegar en local.
-
-En la consola escribir dentro de un espacio virtual de preferencia
-
-pip install -r requirements.txt
-
-set FLASK_APP=app.py
-
-flask run
-
-
-2. Proyecto desplegado en Railway https://railway.app
-
-
-En proyecto se encuentra disponible en 
-
-https://uane-flashcards-production.up.railway.app/
-
-
-Hay tres usuarios registrados Osmar, sol y Miguel. Todos tienen contraseña 123
-
-Código en github
-
-https://github.com/YOrHaS/UANE-flashcards
-
 
 
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
