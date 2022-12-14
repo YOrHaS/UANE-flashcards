@@ -78,7 +78,7 @@ Con la base de datos conectada escribir en consola dentro de un espacio virtual 
 
 LA aplicación está disponible en  [https://uane-flashcards-production.up.railway.app/](https://uane-flashcards-production.up.railway.app/). Tiene tres usuarios Osmar, Maria y Miguelm todos con contrasela 123 con sus respectivos mazos publicos y privados.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme">back to top</a>)</p>
 
 
 
@@ -90,7 +90,7 @@ Link del proyecto : [https://uane-flashcards-production.up.railway.app/](https:/
 
 Link del código del proyecto : [https://github.com/YOrHaS/UANE-flashcards](https://github.com/YOrHaS/UANE-flashcards)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme">back to top</a>)</p>
 
 
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
