@@ -13,18 +13,23 @@
 
 
  
-                    <form method="post">
+                    <form method="post" action="{{ url_for('tarjeta.update_card', id = id) }}">
 
                         <div class="mb-3">
                             <label class="form-label" for="adelante">Adelante</label>
-                            <input  class="form-control" type="text" name="adelante" id="adelante"  value="{{ tarjeta.adelante }}"required>
+                            <input  class="form-control" type="text" name="adelante" id="adelante"  value="{% if result == "" %} {{ tarjeta.adelante }}  {% else %}  {{ word }} {% endif %}"required>
                         
                         </div>
-                    
-                      <div class="mb-3">
+
+                        <div class="mb-3">
                             <label class="form-label"  for="atras">Atras</label>
-                            <textarea   class="form-control"  name="atras" id="atras"  rows="5" cols="33" required>{{ tarjeta.atras }}</textarea>
+                            <textarea  class="form-control"  type="text" name="atras" id="atras"  rows="5" cols="33" required>{% if result == "" %}{{ tarjeta.atras }}{% else %}{{ result }}{% endif %}
+                            </textarea>
                         </div>
+                        
+                    
+                    
+                     
                         
                         <input class="btn btn-primary" type="submit", value="Guardar">
                     </form>
@@ -35,4 +40,44 @@
         </div>
     </div>
 </div>
+
+
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Consultar en diccionario</h3></div>
+                <div   class="card-body">             
+
+
+
+                        <form method="POST" action="{{ url_for('tarjeta.searchdefup', id = id) }}">
+                            <div class="mb-3">
+                                <input class="form-control" type="search" placeholder="search" name="searched" id="searched">
+                            </div>
+
+                            <div class="mb-3">
+                                <select class="form-select"  aria-label="Default select example" name="diccionario">
+                                            <!-- option tag starts -->
+                                          
+                                                <option value="CDIE">Cambridge Dictionary Inglés-Español</option>
+                                                <option value="CDEI">Cambridge Dictionary Español-Inglés</option>
+                                            <!-- option tag ends -->
+                                </select>
+                            </div>
+
+                            <input class="btn btn-primary" type="submit" value="Buscar">
+                        </form>
+
+                        
+                    </div>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
