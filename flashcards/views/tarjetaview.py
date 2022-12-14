@@ -35,15 +35,16 @@ async def searchdef(id):
                 word = request.form.get('searched')
                 word = word.strip()
                 word = re.sub(' +', '-', word)
-                #create the session
+                
+                #Crear sesión
                 session = AsyncHTMLSession()
                 
-                #define our URL
+                #Definir URL
                 url = "https://dictionary.cambridge.org/es/diccionario/ingles-espanol/" + word
-                #use the session to get the data
+                
+                
                 r = await session.get(url)
                 
-                #Render the page, up the number on scrolldown to page down multiple times on a page
                 r.html.arender(sleep=1, keep_page=True, scrolldown=1)
 
                 pronunciacion = r.html.find('div.pr.entry-body__el span.ipa.dipa', first=True) 
@@ -59,15 +60,17 @@ async def searchdef(id):
                 word = request.form.get('searched')
                 word = word.strip()
                 word = re.sub(' +', '-', word)
-                #create the session
+                
+                #Crear sesión
                 session = AsyncHTMLSession()
                 
-                #define our URL
+                #Definir URL
                 url = "https://dictionary.cambridge.org/es/diccionario/espanol-ingles/" + word
-                #use the session to get the data
+                
+                
                 r = await session.get(url)
                 
-                #Render the page, up the number on scrolldown to page down multiple times on a page
+               
                 r.html.arender(sleep=1, keep_page=True, scrolldown=1)
 
                
@@ -95,15 +98,15 @@ async def searchdefup(id):
                 word = request.form.get('searched')
                 word = word.strip()
                 word = re.sub(' +', '-', word)
-                #create the session
+            
                 session = AsyncHTMLSession()
                 
-                #define our URL
+            
                 url = "https://dictionary.cambridge.org/es/diccionario/ingles-espanol/" + word
-                #use the session to get the data
+            
                 r = await session.get(url)
                 
-                #Render the page, up the number on scrolldown to page down multiple times on a page
+            
                 r.html.arender(sleep=1, keep_page=True, scrolldown=1)
 
                 pronunciacion = r.html.find('div.pr.entry-body__el span.ipa.dipa', first=True) 
@@ -119,15 +122,14 @@ async def searchdefup(id):
                 word = request.form.get('searched')
                 word = word.strip()
                 word = re.sub(' +', '-', word)
-                #create the session
+                
                 session = AsyncHTMLSession()
                 
-                #define our URL
+            
                 url = "https://dictionary.cambridge.org/es/diccionario/espanol-ingles/" + word
-                #use the session to get the data
+            
                 r = await session.get(url)
                 
-                #Render the page, up the number on scrolldown to page down multiple times on a page
                 r.html.arender(sleep=1, keep_page=True, scrolldown=1)
 
                
@@ -152,8 +154,6 @@ def create_card(id):
     if request.method == 'POST':
 
       
-           
-        print('texto de prueba')
         mazo = Mazo.query.get(id)
         
         if mazo.idUsuario == g.user.id:
