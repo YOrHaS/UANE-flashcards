@@ -1,4 +1,3 @@
-#paquete principal myblog tiene archivo __init__.py
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
@@ -19,8 +18,7 @@ app.register_blueprint(mazoprint)
 
 from flashcards.views.tarjetaview import tarjetaprint
 app.register_blueprint(tarjetaprint)
-#from flashcards.views.tarjetaview import tarjetatemplate
-#app.register_blueprint(tarjetatemplate)
+
 
 
 with app.app_context():
