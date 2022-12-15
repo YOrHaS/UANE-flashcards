@@ -35,7 +35,7 @@
 
 ## Sobre el proyecto
 
-Aplicación web de flashcards construida con el Framework Flask y  SQLAlchemy para el backend y Bootstrap para el frontend. La aplicación permite el registro y login de usuarios los cuales pueden crear, editar y eliminar tanto tarjetas como mazos los cuales pueden decidir si hacerlos públicos para que otros usuarios puedan verlos y adquirirlos o mantenerlos en privado. La aplicación también permite crear tarjetas buscando palabras en https://dictionary.cambridge.org mediante web scraping tanto de inglés a español como de español a inglés. 
+Aplicación web de flashcards construida con el Framework Flask y  SQLAlchemy para el backend y Bootstrap para el frontend. La aplicación web es responsive y permite el registro y login de usuarios los cuales pueden crear, editar y eliminar tanto tarjetas como mazos los cuales pueden decidir si hacerlos públicos para que otros usuarios puedan verlos y adquirirlos o mantenerlos en privado. La aplicación también permite crear tarjetas buscando palabras en https://dictionary.cambridge.org mediante web scraping tanto de inglés a español como de español a inglés. 
 Para facilitar el proceso de memorización la aplicación se basa en técnicas de repaso espaciado que tienen en cuenta el funcionamiento de la memoria, en concreto el sistema Leitner. Cada tarjeta tiene asignado un grado de dificultad que va del 1 al 5 según la facilidad con la que el usuario recuerda la respuesta. Al momento de estudiar un mazo la aplicación muestra en orden las tarjetas en base a su grado de dificultad lo que permite repasar primero las más difíciles.
 
 <p align="right">(<a href="#readme">back to top</a>)</p>
