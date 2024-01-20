@@ -76,7 +76,7 @@ Con la base de datos conectada escribir en consola dentro de un espacio virtual 
    
 ### Aplicación desplegada
 
-La aplicación está disponible en  [https://uane-flashcards-production.up.railway.app/](https://uane-flashcards-production.up.railway.app/). Tiene tres usuarios Osmar, Maria y Miguel todos con contraseña 123 con sus respectivos mazos públicos y privados.
+La aplicación está disponible en  [https://flash-cards-due8.onrender.com//](https://flash-cards-due8.onrender.com/). Tiene un usuario Osmar con contraseña 123456.
 
 <p align="right">(<a href="#readme">back to top</a>)</p>
 
@@ -86,7 +86,7 @@ La aplicación está disponible en  [https://uane-flashcards-production.up.railw
 
 
 
-Link del proyecto : [https://uane-flashcards-production.up.railway.app/](https://uane-flashcards-production.up.railway.app/)
+Link del proyecto : [https://flash-cards-due8.onrender.com/](https://flash-cards-due8.onrender.com/)
 
 Link del código del proyecto : [https://github.com/YOrHaS/UANE-flashcards](https://github.com/YOrHaS/UANE-flashcards)
 
